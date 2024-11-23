@@ -88,7 +88,7 @@ class BaseTestForMakeRecipe(RecipeCtx):
         with mock.patch(
             f"pythonforandroid.recipes.{self.recipe_name}.sh.Command"
         ) as mock_sh_command, mock.patch(
-            f"pythonforandroid.recipes.{self.recipe_name}.sh.make", create=True
+            f"pythonforandroid.recipes.{self.recipe_name}.sh.make"
         ) as mock_make:
             self.recipe.build_arch(self.arch)
 
@@ -130,9 +130,9 @@ class BaseTestForCmakeRecipe(BaseTestForMakeRecipe):
         # Since the following mocks are dynamic,
         # we mock it inside a Context Manager
         with mock.patch(
-            f"pythonforandroid.recipes.{self.recipe_name}.sh.make", create=True
+            f"pythonforandroid.recipes.{self.recipe_name}.sh.make"
         ) as mock_make, mock.patch(
-            f"pythonforandroid.recipes.{self.recipe_name}.sh.cmake", create=True
+            f"pythonforandroid.recipes.{self.recipe_name}.sh.cmake"
         ) as mock_cmake:
             self.recipe.build_arch(self.arch)
 

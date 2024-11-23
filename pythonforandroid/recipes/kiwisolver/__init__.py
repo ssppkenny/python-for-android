@@ -1,12 +1,11 @@
-from pythonforandroid.recipe import PyProjectRecipe
+from pythonforandroid.recipe import CppCompiledComponentsPythonRecipe
 
 
-class KiwiSolverRecipe(PyProjectRecipe):
+class KiwiSolverRecipe(CppCompiledComponentsPythonRecipe):
     site_packages_name = 'kiwisolver'
-    version = '1.4.5'
-    url = 'git+https://github.com/nucleic/kiwi'
+    version = '1.3.2'
+    url = 'https://github.com/nucleic/kiwi/archive/{version}.zip'
     depends = ['cppy']
-    need_stl_shared = True
 
 
 recipe = KiwiSolverRecipe()

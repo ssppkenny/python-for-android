@@ -144,8 +144,9 @@ class Arch:
             ' '
             + " ".join(
                 [
-                    "-L"
-                    + link_path
+                    "-L'"
+                    + link_path.replace("'", "'\"'\"'")
+                    + "'"  # no shlex.quote in py2
                     for link_path in self.extra_global_link_paths
                 ]
             )
