@@ -118,6 +118,7 @@ class RlsamodRecipe(CythonRecipe):
                                 arch.arch)))
 
         env['LDSHARED'] = env['CC'] + ' -shared'
+        env['LDFLAGS'] += ' -llog -landroid'
         # shprint(sh.whereis, env['LDSHARED'], _env=env)
         env['LIBLINK'] = 'NOTNONE'
         if self.ctx.copy_libs:
