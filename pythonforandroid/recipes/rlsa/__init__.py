@@ -7,7 +7,7 @@ class RlsaRecipe(CompiledComponentsPythonRecipe):
       - build and install python binding for protobuf_cpp
     """
     name = 'rlsa'
-    version = '0.0.5'
+    version = '0.0.6'
     url = 'https://github.com/ssppkenny/rlsa/archive/refs/tags/{version}.tar.gz'
     call_hostpython_via_targetpython = False
     depends = ['numpy', 'setuptools']
