@@ -16,7 +16,7 @@ from pythonforandroid.logger import (
 
 
 class RlsamodRecipe(CythonRecipe):
-    version = '0.0.6'
+    version = '0.0.7'
     url = "https://github.com/ssppkenny/rlsamod/archive/refs/tags/{version}.tar.gz"
     site_packages_name = 'rlsamod'
     depends = ['setuptools', 'cython', 'numpy']
